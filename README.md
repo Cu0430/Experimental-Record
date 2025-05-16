@@ -2,8 +2,8 @@
 This repository is used to record the experimental process and model evolution in my research internship: **a study on cross-modal remote sensing image classification for small samples based on progressive hierarchical alignment.** Each subfolder (e.g., v1/, v2/, ...) represents an important iteration of the model architecture, and is accompanied by a corresponding README.md file detailing the changes and experimental results. The experimental code was written and adapted from 2025.3.22
 # Research Motivation
 In the task of joint classification of small sample multispectral (MS) and panchromatic (PAN) remote sensing images, two key challenges are faced:  
-1) Multi-level semantic misalignment: shallow feature misalignment errors are transmitted layer by layer in the network, resulting in the inability to achieve true cross-modal consistency by aligning only high-level semantic features;\
-2) Loss of modality-specific information: over-alignment may impair modality-specific discriminative capabilities.\
+1) Multi-level semantic misalignment: shallow feature misalignment errors are transmitted layer by layer in the network, resulting in the inability to achieve true cross-modal consistency by aligning only high-level semantic features;
+2) Loss of modality-specific information: over-alignment may impair modality-specific discriminative capabilities.
 
 To solve the above problems, this study designs **a progressive hierarchical alignment mechanism** and proposes **a modality-compensated dictionary module** to improve the discriminative and robustness of features.
 # Current Results
