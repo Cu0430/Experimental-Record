@@ -1,15 +1,15 @@
 # Progressive Hierarchical Alignment for Few-Shot Cross-Modal Remote Sensing Image Classification
-本仓库用于记录本人在科研实习中的实验过程与模型演化：**基于渐进式层次对齐的小样本跨模态遥感图像分类研究**。每个子文件夹（如 v1/, v2/, ...）代表模型架构的一次重要迭代，均配有相应的 README.md 文件详细说明改动与实验结果。该实验代码从2025.3.22开始进行编写和调整。
-# 研究动机
-在小样本多光谱（MS）与全色（PAN）遥感图像联合分类任务中，面临两个关键挑战：  
-1）多层次语义错位：浅层特征未对齐误差在网络中逐层传递，导致仅对齐高层语义特征无法实现真正的跨模态一致性；  
-2）模态特异性信息丢失：过度对齐可能损害模态特有的判别能力。  
-为解决上述问题，本研究设计了一种渐进式层次对齐机制，并提出了模态补偿字典模块，以提升特征的判别性和鲁棒性。
-# 当前结果
-实验中使用的数据集是呼和浩特的MS和PAN图像。整个实验过程经历了过山车式的变化：一开始AA只有40%-50%，调整网络结构之后，AA能到71%。后来发现有原则性的数据处理错误，调整之后AA又回到了30%左右。之后又发现了数据量的问题，又调整了超参数、网络结构等，目前取得的最佳结果如下：  
+This repository is used to record the experimental process and model evolution in my research internship: **a study on cross-modal remote sensing image classification for small samples based on progressive hierarchical alignment.** Each subfolder (e.g., v1/, v2/, ...) represents an important iteration of the model architecture, and is accompanied by a corresponding README.md file detailing the changes and experimental results. The experimental code was written and adapted from 2025.3.22
+# Research Motivation
+In the task of joint classification of small sample multispectral (MS) and panchromatic (PAN) remote sensing images, two key challenges are faced:\
+1) Multi-level semantic misalignment: shallow feature misalignment errors are transmitted layer by layer in the network, resulting in the inability to achieve true cross-modal consistency by aligning only high-level semantic features;\
+2) Loss of modality-specific information: over-alignment may impair modality-specific discriminative capabilities.\
+To solve the above problems, this study designs **a progressive hierarchical alignment mechanism** and proposes **a modality-compensated dictionary module** to improve the discriminative and robustness of features.
+# Current Results
+The datasets used in the experiment are MS and PAN images of Hohhot. The whole experimental process experienced **a roller coaster**: at the beginning, the AA was only 40%-50%, and after adjusting the network structure, the AA could go up to 71%. Then it was found that there was a principle data processing error, and after the adjustment, the AA went back to about 30%. After that, the problem of data volume was found again, and the hyper-parameters and network structure were adjusted, etc. The best results achieved so far are as follows:\
 **Overall Accuracy (OA): 73.37%  
 Average Accuracy (AA): 75.18%  
 Kappa Coefficient: 69.88%**  
-与当前 SOTA 方法相比，各指标约存在 **2% 左右的差距**，具有进一步优化的潜力。
+Compared with the current SOTA method, there is a gap of about 2% in each index, which has the potential for further optimization.
 # Ps
-My thesis supervisor is Zhu Hao, associate professor of Xidian University. He has some achievements in deep learning and remote sensing image processing. He supervises undergraduate research and publishes papers in IEEE TGRS journals(IF:7.5, 中科院一区TOP期刊). This is his personal homepage at https://faculty.xidian.edu.cn/ZHUHAO/zh_CN/index.htm
+My thesis supervisor is Zhu Hao, associate professor of Xidian University. He has some achievements in deep learning and remote sensing image processing. He supervises undergraduate research and publishes papers in IEEE TGRS journals(IF:7.5, Chinese Academy of Sciences Region I TOP journals). This is his personal homepage at https://faculty.xidian.edu.cn/ZHUHAO/zh_CN/index.htm
